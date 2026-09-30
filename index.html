@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 웹 게임 모음</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+        }
+        .subtitle {
+            color: #aaa;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+        .games {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        .game-card {
+            width: 300px;
+            background: rgba(255,255,255,0.05);
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        .game-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+        .game-card.soccer { border-color: #00ff88; }
+        .game-card.soccer:hover { box-shadow: 0 15px 40px rgba(0, 255, 136, 0.3); }
+        .game-card.shooter { border-color: #ff4444; }
+        .game-card.shooter:hover { box-shadow: 0 15px 40px rgba(255, 68, 68, 0.3); }
+        .game-icon { font-size: 4em; margin-bottom: 15px; }
+        .game-title { font-size: 1.5em; font-weight: bold; margin-bottom: 10px; }
+        .game-desc { color: #aaa; font-size: 0.95em; line-height: 1.5; }
+        .game-tag {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        .soccer .game-tag { background: rgba(0,255,136,0.15); color: #00ff88; }
+        .shooter .game-tag { background: rgba(255,68,68,0.15); color: #ff6666; }
+        footer {
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎮 웹 게임 모음</h1>
+    <p class="subtitle">브라우저에서 바로 즐기는 무료 게임</p>
+
+    <div class="games">
+        <a href="soccer-game.html" class="game-card soccer">
+            <div class="game-icon">⚽</div>
+            <div class="game-title">풀사이즈 축구</div>
+            <div class="game-desc">
+                11 vs 11 실감나는 축구 경기!<br>
+                심판, 포메이션, 스태미나 시스템<br>
+                R키로 선수 변경 가능
+            </div>
+            <span class="game-tag">플레이하기 →</span>
+        </a>
+
+        <a href="shooting-game.html" class="game-card shooter">
+            <div class="game-icon">🔫</div>
+            <div class="game-title">좀비 슈팅</div>
+            <div class="game-desc">
+                웨이브별 좀비 생존 슈팅!<br>
+                미니맵, 엄폐물, 랜덤 보급품<br>
+                4가지 좀비 타입
+            </div>
+            <span class="game-tag">플레이하기 →</span>
+        </a>
+    </div>
+
+    <footer>© 2026 Web Games · GitHub Pages</footer>
+</body>
+</html>
